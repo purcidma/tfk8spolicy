@@ -1,14 +1,6 @@
 #get the data fro the global vars WS
-data "terraform_remote_state" "global" {
-  backend = "remote"
-  config = {
-    organization = "Lab14"
-    workspaces = {
-      name = var.globalwsname
-    }
-  }
-}
 
+  
 variable "globalwsname" {
   type        = string
   description = "TFCB workspace name that has all of the global variables"
